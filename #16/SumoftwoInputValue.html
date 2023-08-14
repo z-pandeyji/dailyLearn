@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#18</title>
+</head>
+<body>
+            <!-- create input boxes here -->
+            <input type="number" id="input1"/>
+            <input type="number" id="input2"/>
+   
+           <!-- create add button here -->
+           <button id="add">Add</button>
+           <!-- create result div here -->
+           <div id="result"></div>
+    <script>
+
+document.getElementById('add').addEventListener('click', () => {
+    const InputValue = document.getElementById('input1').value;
+       const InputValue2 = document.getElementById('input2').value;
+
+const ResultShow = document.getElementById('result');
+
+const AddValue = +InputValue + +InputValue2;
+
+ResultShow.textContent = AddValue;
+
+})
+    </script>
+</body>
+</html>

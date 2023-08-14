@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#18</title>
+</head>
+<body>
+    <input type="text" id="input-text" />
+    <button id="uppercase-btn">Uppercase</button>
+    <button id="lowercase-btn">Lowercase</button>
+    <button id="reset-btn">Reset</button>
+    <p>Output: <span id="output"></span></p>
+    <script>
+// Your JavaScript code will go here
+
+
+
+
+document.getElementById('uppercase-btn').addEventListener('click', ()=> {
+    let inputValue = document.getElementById('input-text');
+    let output = document.getElementById('output');
+    inputValue.value = inputValue.value.toUpperCase();
+   output.textContent = inputValue.value;
+})
+
+document.getElementById('lowercase-btn').addEventListener('click', ()=> {
+    let inputValue = document.getElementById('input-text');
+    let output = document.getElementById('output');
+    inputValue.value = inputValue.value.toLowerCase();
+   output.textContent = inputValue.value;
+})
+
+document.getElementById('reset-btn').addEventListener('click', ()=> {
+    let inputValue = document.getElementById('input-text');
+    const output = document.getElementById('output');
+   inputValue.value = '';
+   output.textContent = '';
+})
+
+
+
+    </script>
+</body>
+</html>
