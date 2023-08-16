@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#19</title>
+    <style>
+        #drop-zone {
+    border: 1px dotted red;
+    padding: 10px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+}
+    </style>
+</head>
+<body>
+    <div id='drop-zone' ondragover="handleDragOver(event)"
+    ondrop="handleDrop(event)"
+    >
+Drop Files here
+    </div>
+    <script>
+        function handleDragOver(event) {
+   event.preventDefault();
+}
+
+function handleDrop(event){
+event.preventDefault();
+let files = event.dataTransfer.files;
+// console.log('files', files);
+for(let i =0; i < files.length; i++){
+    console.log(`File Uploaded successfully ${files[i].name}`)
+}
+}
+    </script>
+</body>
+</html>
