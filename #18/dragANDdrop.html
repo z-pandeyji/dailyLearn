@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#20</title>
+    <style>
+        #dragItem {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+        #dropZone {
+            width: 200px;
+            height: 200px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <div id="dragItem" draggable="true"></div>
+    <div id="dropZone"></div>
+    <script>
+        const dragItem = document.getElementById('dragItem')
+const dropZone = document.getElementById('dropZone')
+
+dragItem.addEventListener('dragstart', (event) => {
+	event.dataTransfer.setData('text/plain', event.target.id)
+})
+
+dropZone.addEventListener('dragover', (event) => {
+	event.preventDefault()
+	event.dataTransfer.dropEffect = 'move'
+	dropZone.style.backgroundColor = 'green'
+})
+
+dropZone.addEventListener('drop', (event) => {
+	event.preventDefault()
+	const data = event.dataTransfer.getData('text/plain')
+	const item = document.getElementById(data)
+	dropZone.appendChild(item)
+	dropZone.style.backgroundColor = ''
+})
+
+dropZone.addEventListener('dragleave', (event) => {
+	dropZone.style.backgroundColor = ''
+})
+
+    </script>
+</body>
+</html>

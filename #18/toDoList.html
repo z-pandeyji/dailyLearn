@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#20</title>
+</head>
+<body>
+    <input id='taskInput' type="text"/>
+    <button id="addTask">ADD</button>
+    <!-- Create ordered list here -->
+    <ol id='taskList'></ol>
+    <script>
+        // first way
+        document.getElementById('addTask').addEventListener('click', () => {
+  const input = document.getElementById('taskInput');
+  const task = input.value.trim();
+
+  if (task) {
+    const taskList = document.getElementById('taskList');
+    const listItem = document.createElement('li');
+
+    listItem.className = task.replace(/[^a-zA-Z0-9]/g, '');
+    listItem.innerHTML = `${task} <button class="delete-btn">Delete</button>`;
+
+    listItem.querySelector('.delete-btn').addEventListener('click', () => {
+      taskList.removeChild(listItem);
+    });
+    
+    taskList.appendChild(listItem);
+    input.value = '';
+  }
+});
+
+
+    </script>
+</body>
+</html>
