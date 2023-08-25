@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#22</title>
+</head>
+<body>
+    <ul id='option-List'>
+        <li style="color: red">Red</li>
+        <li style="color: black">Black</li>
+        <li style="color: orange">Orange</li>
+        <li style="color: green">Green</li>
+        <li style="color: blue">Blue</li>
+    </ul>
+    <p id="selected-items">No items selected</p>
+    <script>
+        document.querySelectorAll('#option-list li').forEach(function (item) {
+	item.addEventListener('click', function () {
+		item.classList.toggle('selected')
+		updateSelectedItems()
+	})
+})
+
+function updateSelectedItems() {
+	const selectedItems = Array.from(
+		document.querySelectorAll('#option-list .selected')
+	).map(function (item) {
+		return item.textContent
+	})
+	document.getElementById('selected-items').textContent =
+		selectedItems.length > 0
+			? selectedItems.join(', ')
+			: 'No items selected'
+}
+
+    </script>
+</body>
+</html>
