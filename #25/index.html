@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#25</title>
+</head>
+<style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    body { background: #e5446d; }
+    .circle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    }
+    .circle {
+       border: 40px solid #f8f4e3;
+       border-radius: 50%;
+       height: 290px;
+       width: 290px;
+       position: relative;
+    }
+    .diamond-1{
+       height: 45px;
+       width: 45px;
+       background: #e5446d;
+       position: absolute;
+       top: 64px;
+       transform: rotate(-45deg);
+    }
+    .diamond-2{
+       height: 45px;
+       width: 45px;
+       background: #e5446d;
+       position: absolute;
+       right: 68px;
+       transform: rotate(-45deg);
+    }
+    .diamond-3{
+       height: 45px;
+       width: 45px;
+       background: #e5446d;
+       position: absolute;
+       left: 68px;
+       transform: rotate(-45deg);
+    }
+    .diamond-4{
+       height: 45px;
+       width: 45px;
+       background: #e5446d;
+       position: absolute;
+       bottom: 65px;
+       transform: rotate(-45deg);
+    }
+    </style>
+<body>
+        <div class="circle-container">
+           <div class="circle"></div>
+           <div class="diamond-1"></div>
+           <div class="diamond-2"></div>
+           <div class="diamond-3"></div>
+           <div class="diamond-4"></div>
+        </div>
+</body>
+</html>
