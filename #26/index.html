@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#26</title>
+</head>
+<style>
+    body { background: #dba159; }
+    .container {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       height: 100vh;
+    }
+    .column-container {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+    }
+    .simple-square {
+       height: 75px;
+       width: 75px;
+       background-color: #fcfdaf;
+       border-radius: 15px;
+       position: relative;
+    }
+    .rotate-square {
+       transform: rotate(-45deg);
+    }
+    .border-square {
+       position: absolute;
+        background-color: #dba159;
+        width: 35px;
+        height: 35px;
+        top: 25%;
+        left: 26%; 
+    }
+    
+    </style>
+<body>
+        <div class="container">
+           <div class="first-container column-container">
+              <div class="simple-square"></div>
+              <div class="rotate-square simple-square"></div>
+           </div>
+              <div class="second-container column-container">
+                 <div class="rotate-square simple-square"></div>
+                 <div class="simple-square">
+                    <div class="border-square"></div>
+                 </div>
+                 <div class="simple-square">
+                    <div class="border-square"></div>
+                 </div>
+                 <div class="simple-square"></div>
+              </div>
+              <div class="third-container column-container">
+                 <div class="simple-square"></div>
+                 <div class="simple-square">
+                    <div class="border-square"></div>
+                 </div>
+                 <div class="simple-square">
+                    <div class="border-square"></div>
+                 </div>
+                 <div class="rotate-square simple-square"></div>
+              </div>
+               <div class="fourth-container column-container">
+                 <div class="rotate-square simple-square"></div>
+                 <div class="simple-square"></div>
+               </div>
+        </div>        
+</body>
+</html>
