@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#27(2)</title>
+</head>
+<body>
+    <style>
+        body { background: #98888e; }
+        .main-container {
+           display: flex;
+           align-items: center;
+           justify-content: space-evenly;
+           margin-top: 20px;
+        }
+        .container-1 {
+           width: 25px;
+           height: 350px;
+           background-color: #f3eaf4;
+           border-radius: 22px;
+        }
+        .container-2 {
+           display: flex;
+           flex-direction: column;
+           justify-content: space-between;
+           
+        }
+        .container-2-a {
+           width: 325px;
+           margin: 32px -163px;
+           height: 25px;
+           background-color: #f3eaf4;
+           border-radius: 22px;
+        }
+        .container-3 {
+              width: 25px;
+           height: 350px;
+           background-color: #f3eaf4;
+           border-radius: 22px;
+        }
+        .p-realtive {
+           position: relative;
+        }
+        .t-shape {
+           width: 25px;
+           height: 300px;
+           background-color: #f3eaf4;
+           border-radius: 22px;
+             transform: translateX(50%);
+          animation-duration: 4s;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+        
+        }
+        .t-shape-1 {
+           position: absolute;
+           top: -235px;
+           right: 50%;
+            animation-name: moveTShape1;
+        }
+        .t-shape-2 {
+           position: absolute;
+           top: -35px;
+           right: 50%;
+             animation-name: moveTShape2;
+        }
+        @keyframes moveTShape1 {
+          0%, 100% {
+            transform: translateX(50%) translateY(-100px);
+          }
+          50% {
+            transform: translateX(50%) translateY(100px);
+          }
+        }
+        
+        @keyframes moveTShape2 {
+          0%, 100% {
+            transform: translateX(50%) translateY(100px);
+          }
+          50% {
+            transform: translateX(50%) translateY(-100px);
+          }
+        } 
+        </style>
+        
+        <div class="main-container">
+        <div class="container-1">
+        </div>
+        <div class="container-2">
+           <div class="container-2-a p-realtive"><div class="t-shape t-shape-1"></div></div>
+           <div class="container-2-a"></div>
+           <div class="container-2-a"></div>
+           <div class="container-2-a p-realtive"><div class="t-shape t-shape-2"></div></div>
+        </div>
+        <div class="container-3">
+        </div>
+        </div>
+</body>
+</html>
