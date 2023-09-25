@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#28</title>
+</head>
+<body>
+    <style>
+        body { background: #580c1f; }
+        .container {
+           margin: 20px 0;
+        }
+        .right-point-rectangle {
+           width: 300px;
+           height: 63px;
+           background-color: #a7333f;
+           margin: 10px 0 0 -15px;
+           float: left;
+           position: relative;
+           
+        }
+        .right-point-rectangle::before {
+            content : "";
+            position: absolute;
+            top: 0px;
+            right: -17px;
+            width: 0;
+            height: 0;
+            border-top: 32px solid #580c1f;
+            border-bottom: 31px solid #580c1f;
+            border-left: 33px solid #a7333f;
+        }
+        .left-point-rectangle {
+           float: right;
+           width: 300px;
+           height: 63px;
+           background-color: #a7333f;
+           margin: 10px -15px 0 0;
+           position: relative;
+        }
+        .left-point-rectangle::before {
+            content : "";
+            position: absolute;
+            top: 0px;
+            left: -17px;
+            width: 0;
+            height: 0;
+            border-top: 32px solid #580c1f;
+            border-bottom: 31px solid #580c1f;
+            border-right: 33px solid #a7333f;
+        }
+        
+        
+        </style>
+        <div class="container">
+           <div class="right-point-rectangle"></div>
+           <div class="left-point-rectangle"></div>
+           <div class="right-point-rectangle"></div>
+           <div class="left-point-rectangle"></div>
+           <div class="right-point-rectangle"></div>
+        </div>
+        
+</body>
+</html>
