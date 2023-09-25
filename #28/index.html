@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#28</title>
+</head>
+<body>
+    <style>
+        body { background: #8f9491; }
+        .container {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+        }
+        .rectangle {
+           width: 190px;
+           height: 330px; 
+           background-color: #eadde1; 
+           position: relative;
+           margin-bottom: 10px; 
+        }
+        .triangle {
+           width: 0;
+           height: 0;
+        }
+        .triangle-1 {
+           position: absolute; 
+           top: 38%;
+           left: -15px;
+           border-top: 40px solid transparent;
+           border-left: 50px solid #8f9491;
+           border-bottom:  40px solid transparent;
+        }
+        .triangle-2 {
+           position: absolute; 
+           top: 38%;
+           right: -15px;
+           border-top: 40px solid transparent;
+           border-right: 50px solid #8f9491;
+           border-bottom:  40px solid transparent;
+        }
+        .triangle-3 {
+           position: absolute; 
+           top: 40px;
+           right: 32%;
+           border-left: 30px solid transparent;
+           border-top: 85px solid #8f9491;
+           border-right:  30px solid transparent;
+        }
+        .triangle-4 {
+           position: absolute; 
+           top: 62%;
+           right: 32%;
+           border-left: 30px solid transparent;
+           border-bottom: 85px solid #8f9491;
+           border-right:  30px solid transparent;
+        }
+        .circle {
+           width: 30px;
+           background: #8f9491; 
+           height: 30px;
+           border-radius: 50%;
+           position: absolute;
+           top: 47%;
+           right: 40%;
+        }
+        </style>
+        <div class="container">
+           <div class="rectangle">
+              <div class="triangle triangle-1"></div>
+              <div class="triangle triangle-2"></div>
+              <div class="triangle triangle-3"></div>
+              <div class="triangle triangle-4"></div>
+              <div class="circle"></div>
+           </div>
+        </div>        
+</body>
+</html>
