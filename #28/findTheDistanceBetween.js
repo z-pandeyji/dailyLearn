@@ -9,4 +9,4 @@ const findTheDistanceValue = function (arr1, arr2, d) {
 }
 
 
-console.log(findTheDistanceValue([4,5,8], [10,9,1,8], 2))
+console.log(findTheDistanceValue([4,5,8], [10,9,1,8], 2));
