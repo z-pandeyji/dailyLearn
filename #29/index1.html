@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#29</title>
+</head>
+<style>
+    body { background: #EF476F; }
+    .main-container{
+       width:290px;
+       height:290;
+       background:#ffc43d;
+       border-radius:50%;
+       margin:60 10px;
+       position:relative; 
+    }
+    .animation{
+       display:flex;
+       align-items:center;
+       justify-content: space-between;
+       width:100%;
+       position:relative;
+    }
+    .main-container::after{
+       content:'';
+       position:absolute;
+       right:0;
+       top:-10;
+       border-right:160px solid #EF476F;
+       border-top:160px solid transparent;
+       border-bottom:160px solid transparent;
+       animation: move 1s infinite;
+    }
+    @keyframes move {
+      0%, 50% {
+              opacity:0;
+      }
+      50%,100% {
+        opacity: 1;
+      }
+    }
+    .ball-move{
+       width:200px;
+       position:absolute;
+       right:-80;
+       display:flex;
+    }
+    .ball-div{
+       background:#fff;
+       height:20px;
+       width:20px;
+       border-radius:50%;
+       animation: ball 1s infinite ;
+    }
+    .ball2{
+        animation: ball2 2s infinite ;
+    }
+    @keyframes ball {
+      0%, 50% {
+        opacity: 0;
+        transform: translate(200px, 0);
+        }
+      50% , 100% {
+        opacity: 1;
+      }
+    }
+    </style>
+<body>
+   
+        <div></div>
+        <div class="animation">
+        <div class="main-container">
+        </div>
+        <div class="ball-move">
+        <div class="ball-div"></div>
+        <div class="ball-div ball2"></div>
+        </div>
+        </div>
+</body>
+</html>
