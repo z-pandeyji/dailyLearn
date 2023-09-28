@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#30</title>
+</head>
+<body>
+    <style>
+        body { background: #474044; }
+        .container-box{
+           height:310px;
+           width:270px;
+           background:#50d8d7;
+           margin:40px auto 0;
+           border-top-right-radius:150px;
+           border-top-left-radius:150px;
+           position:relative;
+        }
+        .wrap{
+           position: relative;
+            width: 100px;
+            height: 40px;
+            color: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+            line-height: 40px;
+            font-size: 2rem;
+            text-align: center;
+            font-weight: 400;
+            padding-top: 9rem;
+            margin: 30px 70px 0;
+            
+        }
+        .eye {
+                position: absolute;
+                margin: auto;
+                top: 0;
+                bottom: 0;
+                background: #fff;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: inline-block;
+                overflow: hidden;
+        }
+        .eye::before {
+                    content: '';
+                    position: absolute;
+                    margin: auto;
+                    width: 10px;
+                    height: 10px;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    border-radius: 50%;
+                    background: rgba(20,20,20,1);
+                }
+                .blink {
+                    animation: blink 2s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+                    
+                }
+                
+            .eye:first-child {
+                    left: 0;
+                }
+                .eye:last-child {
+                    right: -8;
+                    top:0;
+                }	
+                
+            @keyframes blink {
+            0%, 8% {
+                height: 40px;
+            }
+            10%, 12% {
+                height: 5px;
+            }
+            14%, 100% {
+                height: 40px;
+            }
+        }
+        .name{
+           text-align:center;
+        }
+        .smile-class{
+           border-color:#474044;
+          border-style: solid;
+           height:100px;
+          width: 100px;
+          border-radius:100px 0 0 0px ;
+          transform:rotate(225deg);
+          border-width: 2px 0 0 2px;
+          position:absolute;
+          top:120px;
+          left:75px;
+         }
+        .bottom-handler{
+           display:flex;
+           width:270px;
+           justify-content:space-between;
+           margin:-35px auto 0;
+           position:relative;
+        }
+        .bottom-box{
+           border-bottom:35px solid #474044;
+           border-right:35px solid transparent;
+           border-left:35px solid transparent;
+           position:relative;
+        }
+        .bottom-box::after{
+           content:'';
+           border-bottom:35px solid #474044;
+           border-right:35px solid transparent;
+           border-left:35px solid transparent;
+           right:-100px;
+           position:absolute;
+        }
+        .bottom2::after{
+           right:35px;
+        }
+        </style>
+        <div class="container-box">
+              <div class="wrap">
+              <div class="eye blink"></div>
+            <div class="eye blink"></div>
+        </div>
+        <div class="smile-class smile1"></div>
+        </div>
+        <div class="bottom-handler">
+           <div class="bottom-box"></div>
+           <div class="bottom-box bottom2"></div>
+        </div>
+</body>
+</html>
