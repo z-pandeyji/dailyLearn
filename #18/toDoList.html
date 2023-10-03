@@ -8,10 +8,8 @@
 <body>
     <input id='taskInput' type="text"/>
     <button id="addTask">ADD</button>
-    <!-- Create ordered list here -->
     <ol id='taskList'></ol>
     <script>
-        // first way
         document.getElementById('addTask').addEventListener('click', () => {
   const input = document.getElementById('taskInput');
   const task = input.value.trim();

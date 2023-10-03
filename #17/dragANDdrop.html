@@ -28,7 +28,6 @@ Drop Files here
 function handleDrop(event){
 event.preventDefault();
 let files = event.dataTransfer.files;
-// console.log('files', files);
 for(let i =0; i < files.length; i++){
     console.log(`File Uploaded successfully ${files[i].name}`)
 }
