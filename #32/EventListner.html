@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#32</title>
+</head>
+<body>
+    <button id="button1">Click Me!! addEventlister</button>
+    <button id="button2">Click Me!! using direct onclick</button>
+    <script>
+        // Anything you do is an event and Javascript is a event driven Language. Move a mouse curser and
+        // clicking on keyboard.
+        // HTML event and HTML element is event target.
+        // Most common is click, mouseup, mousedown, scrolling, anycustomtype
+        let b1 = document.querySelector('#button1');
+        let b2 = document.querySelector('#button2');
+        b1.addEventListener('click', clickHandler); // If I write ,{once: true} then it will give the only one time result.
+        b1.addEventListener('click', clickHandler2, {once:true});
+        function clickHandler() {
+            b1.innerText = "Your one-time random number: " + Math.random(3);
+        }
+        function clickHandler2() {
+            alert('I came only one time because it write the ,{once: true}')
+        }
+
+        b2.onclick = () => {
+            b2.innerText = "Your one-time random number: " + Math.random(3);
+
+            // it doesn't have anyspecific way to do only time but there is one hack
+
+            b2.onclick = 0;
+        }
+
+        //  and onclick doesn't work for both onclick function it will work the last.
+        b2.onclick = () => {
+            alert('Hello Guyzz I am button 2')
+        }
+
+    </script>
+</body>
+</html>

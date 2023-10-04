@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Hello Pandeyji</h2>
+    <button>Click Me! to Delete Element</button>
+    <button id="deleteButton">Click me too delete!!!!!</button>
+    <!-- <script>
+        let button = document.querySelector('button');
+        let dButton = document.querySelector('#deleteButton');
+        dButton.onclick = () => {
+            dButton.remove();
+        }
+        button.onclick = () => {
+            let h1 = document.createElement('h1');
+            h1.innerText = "Hello I will be deleted after 1 seconds";   
+            button.append('Bye after 1 seconds', h1);
+            setTimeout(()=> {
+                h1.remove()
+            }, 1000)
+        }
+        </script> -->
+        <script>
+            let button = document.querySelector('button');
+            let dButton = document.querySelector('#deleteButton');
+            dButton.onclick = () => {
+                dButton.remove();
+            }
+            button.onclick = () => {
+                let h1 = document.createElement('h1');
+                h1.innerText = "Hello I will be deleted after 1 seconds";   
+                h1.append('Bye after 1 seconds');
+                button.appendChild(h1);
+                setTimeout(()=> {
+                    h1.remove()
+                }, 1000)
+            }
+        </script>
+        
+</body>
+</html>

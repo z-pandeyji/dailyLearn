@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Hello Pandeyji</h2>    
+    <button>Click Me!</button>
+    <!-- <script>
+        let button = document.querySelector('button');
+        button.onclick = () => {
+            //creating Element for the DOM
+            let createH1 = document.createElement('h1');
+            // creating property/text for the DOM;
+            createH1.innerText = 'Wow this is so magical';
+            // root -> child1 child2 (Talking about the nodes in the DOM)
+
+            //document.node.appendChild('createH1');
+            button.appendChild(createH1);
+        }
+    </script> -->
+
+    <!-- How To create only 1 h1?  -->
+    <!-- Answer: Create a False h1 to check if there are any h1 in the node or not -->
+    <script>
+        let button = document.querySelector('button');
+        // flag variable
+        let h1Created = false;
+    
+        button.onclick = () => {
+            // check if h1 is already created
+            if(!h1Created) {
+                // creating Element for the DOM
+                let createH1 = document.createElement('h1');
+                // creating property/text for the DOM;
+                createH1.innerText = 'Wow this is so magical';
+        
+                button.appendChild(createH1);
+                
+                // set flag to true after creating h1
+                h1Created = true;
+            }
+        }
+    </script>
+</body>
+</html>

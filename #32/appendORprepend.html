@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>#32</title>
+    </head>
+    <body>
+        <h2>Hello Pandeyji</h2>    
+        <button>Click Me to append</button>
+        <button id="prependButton">Click Me to prepend</button>
+        <script>
+            // append and prepend
+            // append and appendChild is different from each other. appendChild only create/changes for the nodes
+            // of the child not the text. append can create the element or text both.
+            let button = document.querySelector('button');
+            let button2 = document.getElementById('prependButton');
+        button.onclick = () => {
+            let createH1 = document.createElement('h1');
+            createH1.innerText = 'Wow this is so magical';
+            // button.append('Hello this is text Not the H1 tag');
+            button.append('hello I create H1 and Text Also but after button', createH1)
+        }
+        button2.onclick = () => {
+            let createH1 = document.createElement('h1');
+            createH1.innerText = 'Wow this is so magical';
+            button2.prepend(createH1);
+            button.append('hello I create H1 and Text Also but before button', createH1)
+        }
+        </script>
+    </body>
+</html>
