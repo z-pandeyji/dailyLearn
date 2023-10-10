@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#15</title>
+</head>
+<body>
+    <button id="getNetworkInfo">Get Network Info</button>
+    <div id="networkInfoContainer"></div>
+    <script>
+        document.getElementById('getNetworkInfo').addEventListener('click', ()=> {
+    if('connection' in navigator) {
+        const connection = navigator.connection;
+        console.log('connection', connection);
+        const effectiveType = connection.effectiveType;
+        const downlink = connection.downlink;
+        const saveData = connection.saveData;
+        const rtt = connection.rtt;
+
+        let TextContent = document.getElementById('networkInfoContainer');
+
+        TextContent.textContent = `${effectiveType}, ${downlink}, ${saveData}, ${rtt} `
+    }
+})
+    </script>
+</body>
+</html>

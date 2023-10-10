@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#26</title>
+</head>
+<body>
+    <input type="time" id="time-input"/>
+<button id="convert-button">Convert</button>
+    <select id="timezone-selection">
+        <option>+00:00</option>
+        <option>+01:00</option>
+        <option>+02:00</option>
+    </select>
+        <p id="output"></p>
+    <script>
+        document.getElementById('convert-button').addEventListener('click', function() {
+  const inputTime = document.getElementById('time-input').value;
+  const timezoneOffset = document.getElementById('timezone-selection').value;
+
+  const timePieces = inputTime.split(':');
+  const offsetPieces = timezoneOffset.split(':');
+
+  let convertedHour = parseInt(timePieces[0]) + parseInt(offsetPieces[0]);
+  let convertedMinute = parseInt(timePieces[1]) + parseInt(offsetPieces[1]);
+
+  if (convertedMinute >= 60) {
+    convertedHour += 1;
+    convertedMinute -= 60;
+  }
+
+  if (convertedHour >= 24) {
+    convertedHour -= 24;
+  }
+
+  document.getElementById('output').innerHTML = `Converted time: ${convertedHour.toString().padStart(2, '0')}:${convertedMinute.toString().padStart(2, '0')}`;
+});
+    </script>
+</body>
+</html>

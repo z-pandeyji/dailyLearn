@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#28</title>
+</head>
+<body>
+    <textarea id="inputText"></textarea>
+    <button id='countButton'>Count</button>
+    <span id="wordCount"></span>
+    <script>
+        document.getElementById('countButton').addEventListener('click', ()=>{
+    let textArea = document.getElementById('inputText').value;
+    let spanContainer = document.getElementById('wordCount');
+
+    const textAreaCount = textArea.trim().split(' ').length;
+    spanContainer.textContent = textAreaCount;
+
+})
+    </script>
+</body>
+</html>

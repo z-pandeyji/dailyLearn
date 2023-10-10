@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#16</title>
+</head>
+<body>
+    <video id="myVideo" width="400" height="400" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+    </video>
+    <script>
+        const video = document.getElementById('myVideo')
+
+video.addEventListener('click',()=>{
+    if(video.paused) {
+        video.play()
+    } else {
+        video.pause()
+    }
+})
+    </script>
+</body>
+</html>

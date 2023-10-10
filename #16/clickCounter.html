@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>#16</title>
+		<style>
+			/* Add your CSS styles here */
+			body {
+				background-color: yellow;
+			}
+			#count-display {
+				font-size: 1rem;
+				font-weight: 600;
+			}
+			#counter-btn {
+				border-radius: 2px;
+				background-color: red;
+				color: #fff;
+				font-size: 1rem;
+				outline: none;
+			}
+			#counter-btn:focus {
+				outline: none;
+				border: none;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Add your HTML code here -->
+		<p id="count-display">0</p>
+		<button id="counter-btn">Counter-Btn</button>
+
+		<script>
+			// Add your JavaScript code here
+			const IncreamentButton = document.getElementById('counter-btn');
+			let count = 0;
+			IncreamentButton.addEventListener('click', ()=> {
+			count++;
+			const paragraphValue = document.getElementById('count-display');
+			paragraphValue.innerText = count;
+			})
+		</script>
+	</body>
+</html>

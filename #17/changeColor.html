@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#17</title>
+</head>
+<body>
+    <p id="colored-text">Hello</p>
+    <button id="color-btn">COLOR BUTTON</button>
+    <script>
+        function changeColor() {
+    const paragraph = document.getElementById('colored-text');
+    const randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+    paragraph.style.backgroundColor = randomColor
+}
+
+document.getElementById('color-btn').addEventListener('click', changeColor)
+    </script>
+</body>
+</html>

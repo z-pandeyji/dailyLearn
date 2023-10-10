@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#21</title>
+</head>
+<body>
+    <button id="showNotification">Show Notification</button>
+    <script>
+        // Step 1: Create a function named 'displayNotification'
+
+function displayNotification() {
+    if(!("Notification" in window)){
+        alert(`Doesn't support desktop notification`);
+        return;
+    }
+    Notification.requestPermission().then(function(permission){
+        if(permission === 'granted') {
+            new Notification('Hello Codedamn')
+        }
+    })
+}
+
+// Step 2: Add an onclick event to the button to call 'displayNotification'
+
+document.getElementById('showNotification').addEventListener('click', displayNotification)
+    </script>
+</body>
+</html>

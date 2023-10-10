@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Color Change Lab</title>
+	</head>
+	<body>
+		<!-- Create a paragraph with an ID 'myParagraph' and a button with an ID 'colorButton' below -->
+    <p id="myParagraph" style="color: black">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <button id="colorButton">Change color</button>
+
+    <script>
+        let ColorChange = document.getElementById('colorButton');
+        let Content = document.getElementById('myParagraph');
+
+        let click = 0;
+
+        ColorChange.addEventListener('click', () => {
+            click++;
+            Content.style.color = 'red';
+           if(click == 2){
+            Content.style.color = 'green';
+            }
+            else if(click == 3){
+            Content.style.color = 'blue';
+            }
+        })
+
+    </script>
+	</body>
+</html>
