@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anagram Generator</title>
+</head>
+<style>
+ 
+</style>
+<body>
+    <h1>Anagram Generator</h1>
+    <p>Enter a word to generate all possible anagrams:</p>
+    <input type="text" id="inputWord" placeholder="Enter a word">
+    <button onclick="generateAnagrams()">Generate Anagrams</button>
+
+    <p id="listCount"></p>    <p id="executionTime"></p>
+    <ul id="anagramList"></ul>
+    
+
+    <script>
+        function generateAnagrams() {
+            const inputWord = document.getElementById("inputWord").value;
+            const anagramList = document.getElementById("anagramList");
+            const executionTimeElement = document.getElementById("executionTime");
+            const listCount = document.getElementById('listCount');
+            
+            // Check for an empty input
+            if (inputWord.trim() === "") {
+                anagramList.innerHTML = "<li>Please enter a word.</li>";
+                return;
+            }
+
+            // Start measuring execution time
+            const startTime = performance.now();
+
+            // Function to generate anagrams
+            function getAnagrams(word) {
+                if (word.length <= 1) {
+                    return [word];
+                } else {
+                    const anagrams = [];
+                    for (let i = 0; i < word.length; i++) {
+                        const char = word[i];
+                        const remainingChars = word.substring(0, i) + word.substring(i + 1);
+                        const charAnagrams = getAnagrams(remainingChars);
+                        for (const anagram of charAnagrams) {
+                            anagrams.push(char + anagram);
+                        }
+                    }
+                    return anagrams;
+                }
+            }
+
+            const allAnagrams = getAnagrams(inputWord);
+
+            // Stop measuring execution time
+            const endTime = performance.now();
+            const executionTimeInSeconds = (endTime - startTime) / 1000;
+
+            // Display the execution time
+            executionTimeElement.innerText = `Execution Time: ${executionTimeInSeconds}`;
+
+            // Display the anagrams in the list
+            anagramList.innerHTML = allAnagrams.map(anagram => `<li>${anagram}</li>`).join("");
+            const lengthOfUL = allAnagrams.length;
+            listCount.innerText = `List of anagrams ${lengthOfUL}`;
+        }
+    </script>
+</body>
+</html>

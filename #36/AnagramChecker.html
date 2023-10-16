@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anagram Checker #36</title>
+</head>
+<body>
+    <h1>Anagram Checker</h1>
+    <p>Enter two words to check if they are anagrams:</p>
+    <input type="text" id="word1" placeholder="Word 1">
+    <input type="text" id="word2" placeholder="Word 2">
+    <button onclick="checkAnagram()">Check</button>
+    <p id="result"></p>
+
+    <script>
+        function checkAnagram() {
+            const word1 = document.getElementById("word1").value.toLowerCase().replace(/\s/g, '').split('').sort().join('');
+            const word2 = document.getElementById("word2").value.toLowerCase().replace(/\s/g, '').split('').sort().join('');
+
+            if (word1 === word2) {
+                document.getElementById("result").innerText = "These words are anagrams!";
+            } else {
+                document.getElementById("result").innerText = "These words are not anagrams.";
+            }
+        }
+    </script>
+</body>
+</html>
